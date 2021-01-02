@@ -48,6 +48,43 @@
        {
            return false;
        }
+       
+       
+       ////// 2nd solution-------------------------------------------------------------------------------------------------
+       
+       
+         a=a.toLowerCase();
+        b=b.toLowerCase();
+       char []ch=a.toCharArray();
+       char [] m=b.toCharArray();
+       int arr[]=new int[26];
+       if(a.length()!=b.length())
+         return false;
+       
+       for(int i=0;i<ch.length;i++)
+       {
+           int index=ch[i]-'a';
+            arr[index]++;
+       }
+       for(int i=0;i<m.length;i++)
+       {
+           int index=ch[i]-'a';
+           arr[index]--;
+       }
+       for(int i=0;i<arr.length;i++)
+       {
+           if(arr[i]!=0)
+           {
+               return false;
+           }
+       }
+       return true;
+       
+       
+       
+       
+       
+       
 
 
 
